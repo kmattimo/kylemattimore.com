@@ -4,5 +4,5 @@ RewriteEngine On
 #  - index.php
 #  - static/
 #  - robots.txt (convention)
-RewriteCond $1 !^(index\.php|static|robots\.txt)
+RewriteCond $1 !^(index\.php|static|robots\.txt|favicon\.ico)
 RewriteRule ^(.*)$ /index.php [L]
