@@ -44,7 +44,7 @@
 					</div>
 					<br>
 					<div class="row">
-						<div class "col-xs-12">
+						<div class "col-sm-9">
 							<div class="well ">Lorem ipsum dolor sit amet, posse semper an eam. Et iriure abhorreant cum, ad autem altera diceret eam. In vim brute soleat tamquam, vivendo adversarium mea ne, sea reque pericula constituto te. Qui et mutat laoreet, vitae feugait nominati pri ex. Et atqui facete vis, in eam utinam facilisis, integre dolorum est et. </div>
 						</div>
 					</div>
