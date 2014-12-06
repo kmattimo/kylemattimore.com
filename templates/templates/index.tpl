@@ -18,8 +18,10 @@
 
 
 <div class="container">
-		<div class="row">
-				<div class="col-sm-3">
+		<div class="row row-centered">
+	
+	{*
+				<div class="col-sm-2 col-centered">
 					<div class="well well-sm">
 						<ul class="nav nav-stacked">
 							<li><a href="#">Facebook</a></li>
@@ -27,31 +29,36 @@
 							<li><a href="#">GitHub</a></li>
 							<li><a href="#">YouTube</a></li>
 							<li><a href="#">Blog</a></li>
-			
 						</ul>
 					</div>
 				</div> 
-
-				<div class="col-sm-9">
-					<div class="row ">
-						<div class="col-xs-4">
-							<img src="static/images/test1.jpg" class="img-responsive img-rounded " alt="...">
+	*}
+				
+			
+						<div class="col-xs-3 col-centered">
+							<img  src="static/images/test1.jpg" style="max-height:220px" class="img-responsive img-rounded " alt="...">
 							 
 						</div>
-						<div class="col-xs-5">
-							<img src="static/images/test2.jpg" class="img-responsive img-rounded" alt="...">
+						<div class="col-xs-4 col-centered">
+							<img  src="static/images/test2.jpg" style="max-height:220px" class="img-responsive img-rounded" alt="...">
 						</div>
-					</div>
-					<br>
-					<div class="row">
-						<div class "col-sm-9">
-							<div class="well ">Lorem ipsum dolor sit amet, posse semper an eam. Et iriure abhorreant cum, ad autem altera diceret eam. In vim brute soleat tamquam, vivendo adversarium mea ne, sea reque pericula constituto te. Qui et mutat laoreet, vitae feugait nominati pri ex. Et atqui facete vis, in eam utinam facilisis, integre dolorum est et. </div>
-						</div>
-					</div>
+					
+		</div>	
+		<br/>
+		<div class="row row-centered">
 		
+			<div class="col-xs-9 col-centered">
+				Lorem ipsum dolor sit amet, tota adhuc forensibus ut sea. Tamquam fabellas cum in, nam ei quod justo expetenda. Te pri cibo mandamus, ei sea elitr incorrupte appellantur, case causae tincidunt duo et. Id quo audire vocibus aliquando, vix everti pertinacia assueverit cu. Ius expetendis mnesarchum argumentum ea, in copiosae signiferumque est. Vidisse dissentiet cu vix, eu mei errem luptatum deterruisset.
+
 				</div>
-		
 		</div>
+		
+		
+			
+		
+	
+		
+
 </div>
 	
 
