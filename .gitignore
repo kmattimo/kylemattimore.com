@@ -1,3 +1,4 @@
 static/media/
 static/media/*
 templates/templates_c/*
+**/Thumbs.db
