@@ -2,18 +2,7 @@
 {extends 'base.tpl'}
 {block name='body'}
 
-<div class="jumbotron text-center">
-	<h1> Kyle Mattimore </h1>
-	
-		<div class="container" >
-			<ul class="nav nav-justified" role="navigation">
-				<li><a href="#">Home</a></li>
-				{*<li><a href="#">About</a></li>*}
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</div>
-</div> 
+
 
 
 <div class="container">
