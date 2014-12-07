@@ -2,11 +2,17 @@
 .row-centered {
     text-align:center;
 }
-.col-centered {
+.col-centered-left {
     display:inline-block;
     float:none;
     /* reset the text-align */
     text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
     /* inline-block space fix */
     margin-right:-4px;
 }

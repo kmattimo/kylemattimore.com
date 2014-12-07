@@ -8,6 +8,8 @@
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
 	
     <link rel="stylesheet" href="/static/css/style.css" />
+	
+	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
 
     <title>{$title}</title>
 </head>
