@@ -20,7 +20,7 @@
 <br/>
 	<div class="row row-centered" id="contactinfo">
 		<div class="col-xs-6 col-centered-left">
-		If you aren't, you can contact me at _kylemattimore+spam(at)gmail(dot)com_
+		If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com]
 		</div>
 	</div>
 </div>	
