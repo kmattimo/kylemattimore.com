@@ -2,24 +2,29 @@
 {extends 'base.tpl'}
 {block name='body'}
 
+<script src="/static/js/humanValidation.js"></script>
+
+
 <div class="container">
 	
 	<div class="row row-centered">
 		<div class="col-xs-6 col-centered-left">
+			I am looking for Summer employment- May through August 2015. 
+			<br><br>
 			<h4> Are you human? </h4>
 		</div>
 	</div>
 	<div class="row row-centered">
 		<div class="col-xs-6 col-centered">
-			<div class="input-group">
-				<input type="text" class="form-control" value="I am not">
-				<span class="input-group-addon"><i class="fa fa-android fa-lg"></i></span>
+			<div class="input-group" id="inputDiv">
+				<input type="text" class="form-control" id="humanInput" value="I am not">
+				<span class="input-group-addon"><i id="human-android" class="fa fa-android fa-lg"></i></span>
 			</div>
 		</div>
 	</div>
 <br/>
-	<div class="row row-centered" id="contactinfo">
-		<div class="col-xs-6 col-centered-left">
+	<div class="row row-centered" >
+		<div class="col-xs-6 col-centered-left" id="contactinfo">
 		If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com]
 		</div>
 	</div>
