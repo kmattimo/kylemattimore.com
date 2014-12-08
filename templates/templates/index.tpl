@@ -2,35 +2,38 @@
 {extends 'base.tpl'}
 {block name='body'}
 
-
-
-
 <div class="container">
 	<div class="row row-centered">
-			
-		<div class="col-xs-3 col-centered">
-			<img  src="static/images/test1.jpg" style="max-height:220px" class="img-responsive img-rounded " alt="...">
+		<div class="col-xs-3 col-sm-12 col-md-8 col-lg-6 col-centered">
+			<div class="row row-centered">
+					
+						<img  src="static/images/test1.jpg" style="max-height:220px;" class="img-responsive img-rounded image-inline" alt="...">
+					
+						<img  src="static/images/test2.jpg" style="max-height:220px; " class="img-responsive img-rounded image-inline" alt="...">
+				
+			</div>
 		</div>
-		
-		<div class="col-xs-4 col-centered">
-			<img  src="static/images/test2.jpg" style="max-height:220px" class="img-responsive img-rounded" alt="...">
-		</div>	
-			
 	</div>		
 <br>
 
 
 	<div class="row row-centered">
 	
-		<div class="col-xs-9 col-centered">
-			Lorem ipsum dolor sit amet, tota adhuc forensibus ut sea. Tamquam fabellas cum in, nam ei quod justo expetenda. Te pri cibo mandamus, ei sea elitr incorrupte appellantur, case causae tincidunt duo et. Id quo audire vocibus aliquando, vix everti pertinacia assueverit cu. Ius expetendis mnesarchum argumentum ea, in copiosae signiferumque est. Vidisse dissentiet cu vix, eu mei errem luptatum deterruisset.
+		<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-centered-left">
+		
+			I'm a senior in Computer Science Engineering at the University of Michigan. 
+			My interests include Computer Security, Networks, Sound Engineering, making and enjoying music, and Ultimate Frisbee. <br/><br/>
+			<div class="alert alert-info" role="alert">
+			I am looking for a position this summer, with a goal to grow my skills in software development, security, and/or networks! &nbsp; <a href="/contact" class="alert-link">Contact me</a>
+			</div>
+			
 		</div>
 	</div>
 <br>
 
 
 	<div class="row row-centered">
-		<div class="col-xs-8 col-centered">
+		<div class="col-xs-12 col-md-8 col-lg-6 col-centered">
 			<ul class="nav nav-pills nav-justified">
 				<li role="presentation"><a href="https://facebook.com/kylemattimore" target="_blank"> <i class="fa fa-facebook fa-lg"></i>&nbsp; facebook</a></li>
 				<li role="presentation"><a href="https://linkedin.com/in/kylemattimore" target="_blank"> <i class="fa fa-linkedin fa-lg"></i>&nbsp; linkedin</a></li>

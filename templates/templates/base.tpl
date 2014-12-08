@@ -22,7 +22,7 @@
 		<br>
 			<div class="container" >
 				<div class="row row-centered-2">	
-					<div class="col-xs-8 col-centered-2">
+					<div class="col-xs-12 col-sm-10 col-md-8 col-centered-2">
 						<ul class="nav nav-tabs nav-justified" role="navigation">
 							<li {if $page=='home'}class="active" {/if}><a href="/">Home</a></li>				
 							<li {if $page=='projects'}class="active" {/if} ><a href="/projects/">Projects</a></li>	

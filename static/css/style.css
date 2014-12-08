@@ -41,11 +41,18 @@
 	vertical-align: middle;
 }
 
+.image-inline {
+	display:inline-block;
+}
+
+
 
 /*this isn't actually what I wanted
 .no-margin {
 	margin-bottom:0;	
 }
+
+
 
 
 
