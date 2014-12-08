@@ -18,17 +18,17 @@
 <div>
 
 	<div class="jumbotron text-center no-bottom-padding">
-		<h1> Kyle Mattimore </h1>
-		
+		<h1> Kyle Mattimore</h1>
+		<br>
 			<div class="container" >
 				<div class="row row-centered-2">	
-				<div class="col-xs-8 col-centered-2">
-					<ul class="nav nav-tabs nav-justified" role="navigation">
-						<li {if $page=='home'}class="active" {/if}><a href="/">Home</a></li>				
-						<li {if $page=='projects'}class="active" {/if} ><a href="/projects/">Projects</a></li>	
-						<li {if $page=='contact'}class="active" {/if}><a href="/contact/">Contact</a></li>	
-					</ul>
-				</div>	
+					<div class="col-xs-8 col-centered-2">
+						<ul class="nav nav-tabs nav-justified" role="navigation">
+							<li {if $page=='home'}class="active" {/if}><a href="/">Home</a></li>				
+							<li {if $page=='projects'}class="active" {/if} ><a href="/projects/">Projects</a></li>	
+							<li {if $page=='contact'}class="active" {/if}><a href="/contact/">Contact</a></li>	
+						</ul>
+					</div>	
 				</div>
 			</div>		
 	</div> 

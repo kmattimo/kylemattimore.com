@@ -31,6 +31,9 @@
 	font-size:14px;
 }
 
+.no-bottom-padding {
+	padding-bottom:0px;
+}
 
 
 .nameheader {
@@ -39,21 +42,17 @@
 }
 
 
-//this isn't actually what I wanted
+/*this isn't actually what I wanted
 .no-margin {
 	margin-bottom:0;	
 }
-/*
-.jumbotron {
-	margin-bottom:0;	
-}
-*/
 
-.no-bottom-padding {
-	padding-bottom:0px;
-}
+
+
+
 
 .nopadding {
    padding: 0 !important;
    margin: 0 !important;
 }
+*/
