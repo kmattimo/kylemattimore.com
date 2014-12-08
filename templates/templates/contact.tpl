@@ -9,7 +9,7 @@
 	
 	<div class="row row-centered">
 		<div class="col-xs-6 col-centered-left">
-			I am looking for Summer employment- May through August 2015. 
+			<h4>I am looking for Summer employment!</h4> May through August 2015. 
 			<br><br>
 			<h4> Are you human? </h4>
 		</div>

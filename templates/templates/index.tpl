@@ -36,7 +36,7 @@
 				<li role="presentation"><a href="https://linkedin.com/in/kylemattimore" target="_blank"> <i class="fa fa-linkedin fa-lg"></i>&nbsp; linkedin</a></li>
 				<li role="presentation"><a href="https://github.com/kmattimo" target="_blank"> <i class="fa fa-github fa-lg"></i>&nbsp; github</a></li>
 				<li role="presentation"><a href="https://www.youtube.com/user/kylemattimore/videos" target="_blank"> <i class="fa fa-youtube fa-lg"></i>&nbsp; youtube</a></li>
-				<li role="presentation"><a href="http://blogger.kylemattimore.com/" target="_blank"> <i class="fa fa-cloud fa-lg"></i>&nbsp; blog</a></li>
+				<li role="presentation"><a href="http://blog.kylemattimore.com/" target="_blank"> <i class="fa fa-cloud fa-lg"></i>&nbsp; blog</a></li>
 				
 				
 			</ul>
