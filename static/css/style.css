@@ -17,7 +17,43 @@
     margin-right:-4px;
 }
 
+/*fix for annoying whitespace between row and column in navigation*/
+.row-centered-2 {
+	text-align:center;
+	font-size: 0
+}
+.col-centered-2 {
+    display:inline-block;
+    float:none;
+    /* inline-block space fix */
+    margin-right:-4px;
+	/*bootstrap default, apparently*/
+	font-size:14px;
+}
+
+
+
 .nameheader {
 	text-align: center;
 	vertical-align: middle;
+}
+
+
+//this isn't actually what I wanted
+.no-margin {
+	margin-bottom:0;	
+}
+/*
+.jumbotron {
+	margin-bottom:0;	
+}
+*/
+
+.no-bottom-padding {
+	padding-bottom:0px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
 }
