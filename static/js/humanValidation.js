@@ -5,6 +5,7 @@ $(document).ready(function() {
 function validateInput() {
 	var typed = $("#humanInput").val();
 	
+	//decided to match the input box client-side instead of using a billion ajax calls
 	var match = /i am ?$/i;
  
     if(match.test(typed)) {
@@ -17,10 +18,7 @@ function validateInput() {
 		  //cache: false
 		  dataType: "text",
 			success: function( data, typed ) {
-
-				console.log(data);
 				$("#contactinfo").html(decrypt(data,"robots_suck"));
-
 			}
 		})
 

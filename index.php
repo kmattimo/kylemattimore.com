@@ -11,7 +11,7 @@
    $smarty->setCacheDir(__DIR__ . '/templates/cache/');
 
    // Notice how you can set variables here in the PHP that will get carried into the template files
-   $smarty->assign('title', "Kyle Mattimore");
+   
 
 
    // Setup the Routing Framework
@@ -23,16 +23,22 @@
 
    $klein->respond('GET', '/', function ($request, $response, $service) use ($smarty) {
 	 $smarty->assign('page', 'home');
+	 $smarty->assign('title', "Kyle Mattimore");
+	 
      $smarty->display('index.tpl');
    });
    
    $klein->respond('GET', '/projects/?', function ($request, $response, $service) use ($smarty) {
 	 $smarty->assign('page', 'projects');
+	 $smarty->assign('title', "Kyle Mattimore | Projects");
+	 
      $smarty->display('projects.tpl');
    });
    
    $klein->respond('GET', '/contact/?', function ($request, $response, $service) use ($smarty) {
 	 $smarty->assign('page', 'contact');
+	 $smarty->assign('title', "Kyle Mattimore | Contact");
+	 
      $smarty->display('contact.tpl');
    });
    
