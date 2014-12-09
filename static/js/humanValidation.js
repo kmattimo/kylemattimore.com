@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+
+	
   $("#humanInput").keyup(validateInput);
 });
 
@@ -29,6 +32,13 @@ function validateInput() {
      //   $("#inputDiv").removeClass("has-success");
 	//	$("#titleLabel").text("Title");
     }
+}
+
+function encode(payload) {
+	return encrypt(payload, "robots_suck");
+}
+function decode(payload) {
+	return decrypt(payload, "robots_suck");
 }
 
 //simple encryption from http://www.trans4mind.com/personal_development/encryption/xor.htm

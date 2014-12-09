@@ -25,7 +25,7 @@
 <br/>
 	<div class="row row-centered" >
 		<div class="col-xs-12 col-md-6 col-lg-6  col-centered-left" id="contactinfo">
-		If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com]
+		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com] </div>
 		</div>
 	</div>
 </div>	

@@ -37,7 +37,8 @@
     {block "body"}Default Body Text{/block}
 </div>
   
-  
+ 
+<noscript> <div class="container"><div class="row row-centered"> Note: you appear to have scripts disabled. Please enable JavaScript for proper functionality. </h4> </div></div> </noscript>
 </body>
 
 </html>
