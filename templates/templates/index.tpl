@@ -4,12 +4,12 @@
 
 <div class="container">
 	<div class="row row-centered">
-		<div class="col-xs-3 col-sm-12 col-md-8 col-lg-6 col-centered">
+		<div class="col-xs-12 col-md-8 col-lg-6 col-centered">
 			<div class="row row-centered">
 					
 						<img  src="static/images/test1.jpg" style="max-height:220px;" class="img-responsive img-rounded image-inline" alt="...">
 					
-						<img  src="static/images/test2.jpg" style="max-height:220px; " class="img-responsive img-rounded image-inline" alt="...">
+						<img  src="static/images/self-guitar-small.jpg" style="max-height:220px; " class="img-responsive img-rounded image-inline" alt="...">
 				
 			</div>
 		</div>
