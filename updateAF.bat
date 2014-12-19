@@ -1,1 +1,1 @@
-af update kylemattimore
+cmd /k af update kylemattimore
