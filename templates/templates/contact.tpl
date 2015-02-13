@@ -2,6 +2,7 @@
 {extends 'base.tpl'}
 {block name='body'}
 
+<script src="/static/js/obfuscation.js"></script>
 <script src="/static/js/humanValidation.js"></script>
 
 
@@ -10,6 +11,7 @@
 	<div class="row row-centered">
 		<div class="col-xs-12 col-md-6 col-lg-6 col-centered-left">
 			<h4>I am seeking Summer employment!</h4> May through August 2015. 
+			
 			<br><br>
 			<h4> Are you human? </h4>
 		</div>
@@ -26,6 +28,8 @@
 	<div class="row row-centered" >
 		<div class="col-xs-12 col-md-6 col-lg-6  col-centered-left" id="contactinfo">
 		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com] </div>
+		
+			<a href="/contact2">Having trouble?</a>
 		</div>
 	</div>
 </div>	
