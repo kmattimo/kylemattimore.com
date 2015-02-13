@@ -41,6 +41,8 @@
 
 <br/><br/>
 
+{if !(isset($payload))}
 <script src="/static/js/obfuscation.js"></script>
 <script src="/static/js/ayah.js"></script>
+{/if}
 {/block}
