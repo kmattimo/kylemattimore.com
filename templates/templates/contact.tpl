@@ -29,7 +29,7 @@
 		<div class="col-xs-12 col-md-6 col-lg-6  col-centered-left" id="contactinfo">
 		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com] </div>
 		
-			<a href="/contact2">Having trouble?</a>
+			<a href="/contact2">Alternate Validation</a>
 		</div>
 	</div>
 </div>	
