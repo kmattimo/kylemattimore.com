@@ -3,7 +3,7 @@
    // Include the Smarty Templating Engine
    define('SMARTY_DIR', __DIR__ . '/Smarty-3.1.14/libs/');
    require_once(SMARTY_DIR . 'Smarty.class.php');
-   require_once("/AYAH/ayah.php");
+   require_once("AYAH/ayah.php");
    $smarty = new Smarty();
 
    $smarty->setTemplateDir(__DIR__ . '/templates/templates/');
