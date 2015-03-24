@@ -3,6 +3,7 @@ function encode(payload) {
 	return encrypt(payload, "robots_suck");
 }
 function decode(payload) {
+	
 	return decrypt(payload, "robots_suck");
 }
 
