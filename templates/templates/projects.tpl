@@ -10,7 +10,7 @@
 			PAT 201 Listening test webapp: &nbsp;
 			<a href="http://pat201.kylemattimore.com">pat201.kylemattimore.com</a> <br><br>
 			<div class="thumbnail"> 
-				<a href="http://pat201.kylemattimore.com"> 	<img src="/static/images/pat201.PNG" > </a>
+				<a href="http://pat201.kylemattimore.com"> 	<img src="/static/images/pat201.png" > </a>
 			</div>
 		<a href="https://github.com/kmattimo/PAT201-Listening-Guide">Source code</a>
 		</div>

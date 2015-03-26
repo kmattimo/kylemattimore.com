@@ -24,7 +24,7 @@
 			I'm a senior in Computer Science Engineering at the University of Michigan. 
 			My interests include Computer Security, Networks, Sound Engineering, making and enjoying music, and Ultimate Frisbee. <br/><br/>
 			<div class="alert alert-info" role="alert">
-			I am looking for a position this summer, with a goal to grow my skills in software development, security, and/or networks! &nbsp; <a href="/contact" class="alert-link">Contact me</a>
+			I am looking for a position this summer, with a goal to grow my skills in Web development, security, and/or networks! &nbsp; <a href="/contact" class="alert-link">Contact me</a>
 			</div>
 			
 		</div>
