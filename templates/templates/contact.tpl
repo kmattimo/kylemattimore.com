@@ -10,9 +10,10 @@
 	
 	<div class="row row-centered">
 		<div class="col-xs-12 col-md-6 col-lg-6 col-centered-left">
-			<h4>I am seeking Summer employment!</h4> May through August 2015. 
+			{*<h4>I am seeking Summer employment!</h4> May through August 2015. 
 			
 			<br><br>
+			*}
 			<h4> Are you human? </h4>
 		</div>
 	</div>
