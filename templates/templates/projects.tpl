@@ -8,9 +8,9 @@
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		<div class="well">
 			PAT 201 Listening test webapp: &nbsp;
-			<a href="http://pat201.kylemattimore.com">pat201.kylemattimore.com</a> <br><br>
+			<a href="http://pat201.kylemattimore.com" target="blank">pat201.kylemattimore.com</a> <br><br>
 			<div class="thumbnail"> 
-				<a href="http://pat201.kylemattimore.com"> 	<img src="/static/images/pat201.png" > </a>
+				<a href="http://pat201.kylemattimore.com" target="blank"> 	<img src="/static/images/pat201.png" > </a>
 			</div>
 		<a href="https://github.com/kmattimo/PAT201-Listening-Guide">Source code</a>
 		</div>
@@ -20,25 +20,30 @@
 		<div class="well">
 			3-track looper Max for Live device <br> <br>
 			<div class="thumbnail">
-				<a href="http://youtu.be/Y7R9IHbrVes"> <img src="/static/images/looper.jpg"  > </a>
+				<a href="http://youtu.be/Y7R9IHbrVes" target="blank"> <img src="/static/images/looper.jpg"  > </a>
 			</div>
 			Designed for an intuitive "Loop Station" feel with a Novation Launchpad. &nbsp;
-			<a href="http://youtu.be/Y7R9IHbrVes">Demo Video</a>
+			<a href="http://youtu.be/Y7R9IHbrVes" target="blank">Demo Video</a>
 		</div>
 	</div>	
 	
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
+		
 		<div class="well">
-			DIY (scrap wood) guitar pedalboard 
-			<div class="thumbnail"> <img src="/static/images/pedalboard-empty.jpg"> </div>
-			<div class="thumbnail"> <img src="/static/images/pedalboard.jpg"> </div>
-			A continuously improving work in progress.
+			<a href="http://imgur.com/a/3sfTD" target="blank">
+				DIY (scrap wood) guitar pedalboard 
+				<div class="thumbnail"> <img src="/static/images/pedalboard-empty.jpg"> </div>
+				<div class="thumbnail"> <img src="http://i.imgur.com/CrDZEFll.jpg"> </div>
+				
+				The always improving work in progress.
+			</a>
 		</div>
+		
 	</div>	
 
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		<div class="well">
-			<a href="http://myessaycoach.net">Myessaycoach.net</a> <br><br>
+			<a href="http://myessaycoach.net" target="blank">Myessaycoach.net</a> <br><br>
 				<div class="thumbnail"> <img src="/static/images/essaycoach.jpg"> </div>
 				Built with Google Sites. Active since 2011.
 		</div>
@@ -46,7 +51,7 @@
 
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		<div class="well">
-			<a href="http://axomichhc.org">Axomichhc.org</a> <br><br>
+			<a href="http://axomichhc.org" target="blank">Axomichhc.org</a> <br><br>
 				<div class="thumbnail">  <img src="/static/images/axo.jpg"> </div>
 				Built with Google Sites for Theta Corp. of Alpha Chi Omega. Active since 2012.
 		</div>
