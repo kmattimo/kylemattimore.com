@@ -19,7 +19,7 @@
 
 	<div class="row row-centered">
 	
-		<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-centered-left">
+		<div class="col-xs-10 col-sm-10 col-md-8 col-lg-6 col-centered">
 		
 			I'm a senior in Computer Science Engineering at the University of Michigan. <br>
 			My interests include Computer Security, Web Development, Sound Engineering, making and enjoying music, and Ultimate Frisbee. <br/><br/>

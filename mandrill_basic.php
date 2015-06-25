@@ -42,7 +42,7 @@ if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
                 'content' => 'Last name')
     ))));
 
-    $async = false;
+    $async = true;
     $ip_pool = null;
     $send_at = null;
     $result = $mandrill->messages->send($message, $async, $ip_pool, $send_at);

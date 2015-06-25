@@ -31,6 +31,10 @@
 		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com] </div>
 		
 			<a href="/contact2">Alternate Validation</a>
+			
+			<noscript> <br> Note: you appear to have scripts disabled. Please enable JavaScript to validate, or examine the code and run the ajax call yourself :) </noscript>
+
+			
 		</div>
 	</div>
 </div>	

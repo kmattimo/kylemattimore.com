@@ -28,7 +28,7 @@
     /* inline-block space fix */
     margin-right:-4px;
 	/*bootstrap default, apparently*/
-	font-size:14px;
+	font-size:16px;
 }
 
 .no-bottom-padding {
@@ -42,6 +42,7 @@
 }
 
 .image-inline {
+	margin: .5em;
 	display:inline-block;
 }
 
