@@ -33,7 +33,7 @@
 		
 		{if isset($payload)} {$payload} 
 		{else}
-		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com] </div>
+		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)g mail<(dot)com] </div>
 		{/if}
 			<a href="/contact">Return to original</a>
 		</div>
@@ -41,7 +41,9 @@
 </div>	
 
 <br/><br/>
+{/block}
 
+{block name='customJS'} 
 {if !(isset($payload))}
 <script src="/static/js/obfuscation.js"></script>
 <script src="/static/js/ayah.js"></script>

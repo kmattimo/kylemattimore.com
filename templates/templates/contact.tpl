@@ -2,8 +2,7 @@
 {extends 'base.tpl'}
 {block name='body'}
 
-<script src="/static/js/obfuscation.js"></script>
-<script src="/static/js/humanValidation.js"></script>
+
 
 
 <div class="container">
@@ -28,7 +27,7 @@
 <br/>
 	<div class="row row-centered" >
 		<div class="col-xs-12 col-md-6 col-lg-6  col-centered-left" id="contactinfo">
-		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)gmail(dot)com] </div>
+		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)g mail<(dot)com] </div>
 		
 			<a href="/contact2">Alternate Validation</a>
 			
@@ -40,4 +39,9 @@
 </div>	
 
 <br/><br/>
+{/block}
+
+{block name='customJS'}
+<script src="/static/js/obfuscation.js"></script>
+<script src="/static/js/humanValidation.js"></script>
 {/block}

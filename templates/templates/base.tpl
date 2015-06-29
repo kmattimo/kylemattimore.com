@@ -11,9 +11,7 @@
     <title>{$title}</title>
 </head>
 <body>
-   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<!--  <script src="/static/js/bootstrap.min.js"></script> -->
+   
 
 <div>
 	<div class="jumbotron text-center no-bottom-padding">
@@ -35,7 +33,12 @@
     {block "body"}Default Body Text{/block}
 </div>
   
-
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<!--  <script src="/static/js/bootstrap.min.js"></script> -->
+		
+{block "customJS"}{/block}		
+		
 {literal}
 <script >    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

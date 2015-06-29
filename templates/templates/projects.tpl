@@ -45,7 +45,7 @@
 		<div class="well">
 			<a href="http://myessaycoach.net" target="blank">Myessaycoach.net</a> <br><br>
 				<div class="thumbnail"> <img src="/static/images/essaycoach.jpg"> </div>
-				Built with Google Sites. Active since 2011.
+				Built with Google Sites, architected for ultra low cost hosting. Active since 2011. 
 		</div>
 	</div>
 
@@ -53,7 +53,7 @@
 		<div class="well">
 			<a href="http://axomichhc.org" target="blank">Axomichhc.org</a> <br><br>
 				<div class="thumbnail">  <img src="/static/images/axo.jpg"> </div>
-				Built with Google Sites for Theta Corp. of Alpha Chi Omega. Active since 2012.
+				Built with Google Sites for Theta Corp. of Alpha Chi Omega, architected for ultra low cost hosting. Active since 2012. 
 		</div>
 	</div>
 	
