@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
    // Include the Smarty Templating Engine
-   define('SMARTY_DIR', __DIR__ . '/Smarty-3.1.14/libs/');
+   define('SMARTY_DIR', __DIR__ . '/smarty-3.1.24/libs/');
    require_once(SMARTY_DIR . 'Smarty.class.php');
    require_once("AYAH/ayah.php");
    require_once("config.php");
