@@ -88,15 +88,6 @@ ini_set('display_errors', 1);
 		}
     });
 
-/*	
-	$klein->respond('GET', '/ET[*]', function ($request) {
-		echo $request->type;
-		echo $request->device;
-		$email='kylemattimore@gmail.com';
-		$message= 'test';
-		echo mail($email, 'test!', $message);
-    });
- */
  
  //base64 encoding should stop source code data mining
 	$klein->respond(array('POST','GET'), '/obfuscate/?', function ($request, $response, $service) use ($smarty) {
