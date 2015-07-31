@@ -4,6 +4,9 @@
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="keywords" content="kylemattimore, kmattimo, umich, kyle mattimore, developer, web developer, music, guitar">
+	<meta name="description" content="Kyle's Digital One-Stop-Shop">
+	<meta name="author" content="Kyle Mattimore">
 	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/style.css" />
