@@ -5,13 +5,11 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="keywords" content="kylemattimore, kmattimo, umich, kyle mattimore, developer, web developer, music, guitar">
-	<meta name="description" content="Kyle's Digital One-Stop-Shop">
+	<meta name="description" content="Kyle's Personal Site | Music &amp; Tech | University of Michigan | One North Interactive">
 	<meta name="author" content="Kyle Mattimore">
-	
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/style.css" />
-	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
-    <title>{$title}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <title>{$title}</title>
 </head>
 <body>
    
@@ -36,10 +34,12 @@
     {block "body"}Default Body Text{/block}
 </div>
   
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<!--  <script src="/static/js/bootstrap.min.js"></script> -->
+
 		
+{block "footerScripts"}
+<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+{/block}		
 {block "customJS"}{/block}		
 		
 {literal}
