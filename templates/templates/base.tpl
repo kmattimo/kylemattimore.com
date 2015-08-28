@@ -47,7 +47,10 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-64487148-1', 'auto');
+	//lets see if this simple obfuscation stops those referral spam crawlers!
+	var gaID = 'U' + 'A' + '-';
+	gaID += '6448' + '7148' + '-2';
+  ga('create', gaID, 'auto');
   ga('send', 'pageview'); </script>
 {/literal}
 </body>
