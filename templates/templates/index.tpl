@@ -34,7 +34,7 @@
 
 
 	<div class="row row-centered">
-		<div class="col-xs-12 col-md-8 col-lg-6 col-centered">
+		<div class="col-xs-12 col-md-10 col-lg-8 col-centered">
 			<ul class="nav nav-pills nav-justified">
 				<li role="presentation"><a href="https://linkedin.com/in/kylemattimore" target="_blank"> <i class="fa fa-linkedin fa-lg"></i>&nbsp; linkedin</a></li>
 				<li role="presentation"><a href="https://www.youtube.com/user/kylemattimore/" target="_blank"> <i class="fa fa-youtube fa-lg"></i>&nbsp; youtube</a></li>
