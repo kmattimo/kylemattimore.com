@@ -9,18 +9,16 @@
         ],
       "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ],
+        ]
       
     },
     "extra": {
       "incenteev-parameters": {
-          "file": "app/config/parameters.yml",
+          "file": "parameters.yml",
           "env-map": {
-          "database_host": "DATABASE_HOST",
-          "database_port": "DATABASE_PORT",
-          "database_name": "DATABASE_NAME",
-          "database_user": "DATABASE_USER",
-          "database_password": "DATABASE_PASSWORD"
+          "mandril_key": "MANDRILL_KEY",
+          "dev_email": "DEV_EMAIL"
         }
+      }
     }
 }

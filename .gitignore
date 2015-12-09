@@ -5,3 +5,4 @@ templates/templates_c/*
 contactInfo.txt
 config.php
 vendor/
+parameters.yml
