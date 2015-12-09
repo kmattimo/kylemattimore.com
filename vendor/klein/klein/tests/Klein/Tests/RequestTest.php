@@ -1,6 +1,6 @@
 <?php
 /**
- * Klein (klein.php) - A lightning fast router for PHP
+ * Klein (klein.php) - A fast & flexible router for PHP
  *
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
@@ -11,14 +11,11 @@
 
 namespace Klein\Tests;
 
-use \Klein\Request;
-use \Klein\Tests\Mocks\MockRequestFactory;
+use Klein\Request;
+use Klein\Tests\Mocks\MockRequestFactory;
 
 /**
  * RequestTest
- * 
- * @uses AbstractKleinTest
- * @package Klein\Tests
  */
 class RequestTest extends AbstractKleinTest
 {
@@ -78,9 +75,9 @@ class RequestTest extends AbstractKleinTest
     public function testUniversalParams()
     {
         // Test data
-        $params_get  = array('page' => 2, 'per_page' => 10, 'num' => 1);
-        $params_post = array('first_name' => 'Trevor', 'last_name' => 'Suarez', 'num' => 2);
-        $cookies     = array('user' => 'Rican7', 'PHPSESSID' => 'randomstring', 'num' => 3);
+        $params_get  = array('page' => 2, 'per_page' => 10, 'num' => 1, 5 => 'ok', 'empty' => null, 'blank' => '');
+        $params_post = array('first_name' => 'Trevor', 'last_name' => 'Suarez', 'num' => 2, 3 => 'hmm', 4 => 'thing');
+        $cookies     = array('user' => 'Rican7', 'PHPSESSID' => 'randomstring', 'num' => 3, 4 => 'dog');
         $named       = array('id' => '1f8ae', 'num' => 4);
 
         // Create the request
@@ -99,6 +96,27 @@ class RequestTest extends AbstractKleinTest
         $this->assertSame($params, $request->params());
         $this->assertSame($params['num'], $request->param('num'));
         $this->assertSame(null, $request->param('thisdoesntexist'));
+    }
+
+    public function testUniversalParamsWithFilter()
+    {
+        // Test data
+        $params_get  = array('page' => 2, 'per_page' => 10, 'num' => 1, 5 => 'ok', 'empty' => null, 'blank' => '');
+        $params_post = array('first_name' => 'Trevor', 'last_name' => 'Suarez', 'num' => 2, 3 => 'hmm', 4 => 'thing');
+        $cookies     = array('user' => 'Rican7', 'PHPSESSID' => 'randomstring', 'num' => 3, 4 => 'dog');
+
+        // Create our filter and expected results
+        $filter      = array('page', 'user', 'num', 'this-key-never-showed-up-anywhere');
+        $expected    = array('page' => 2, 'user' => 'Rican7', 'num' => 3, 'this-key-never-showed-up-anywhere' => null);
+
+        // Create the request
+        $request = new Request(
+            $params_get,
+            $params_post,
+            $cookies
+        );
+
+        $this->assertSame($expected, $request->params($filter));
     }
 
     public function testMagic()
@@ -182,6 +200,12 @@ class RequestTest extends AbstractKleinTest
         // Test data
         $body = '_why is an interesting guy<br> - Trevor';
 
+        // Blank constructor
+        $request = new Request();
+
+        $this->assertEmpty($request->body());
+
+        // In constructor
         $request = new Request(array(), array(), array(), array(), array(), $body);
 
         $this->assertSame($body, $request->body());
@@ -225,12 +249,14 @@ class RequestTest extends AbstractKleinTest
 
     public function testQueryModify()
     {
+        $test_uri = '/test?query';
         $query_string = 'search=string&page=2&per_page=3';
         $test_one = '';
         $test_two = '';
         $test_three = '';
 
         $request = new Request();
+        $request->server()->set('REQUEST_URI', $test_uri);
         $request->server()->set('QUERY_STRING', $query_string);
 
         $this->klein_app->respond(
@@ -248,18 +274,20 @@ class RequestTest extends AbstractKleinTest
 
         $this->klein_app->dispatch($request);
 
+        $expected_uri = parse_url($this->klein_app->request()->uri(), PHP_URL_PATH);
+
         $this->assertSame(
-            $this->klein_app->request()->uri() . '?' . $query_string . '&test=dog',
+            $expected_uri . '?' . $query_string . '&test=dog',
             $test_one
         );
 
         $this->assertSame(
-            $this->klein_app->request()->uri() . '?' . str_replace('page=2', 'page=7', $query_string),
+            $expected_uri . '?' . str_replace('page=2', 'page=7', $query_string),
             $test_two
         );
 
         $this->assertSame(
-            $this->klein_app->request()->uri() . '?' . str_replace('per_page=3', 'per_page=10', $query_string),
+            $expected_uri . '?' . str_replace('per_page=3', 'per_page=10', $query_string),
             $test_three
         );
     }

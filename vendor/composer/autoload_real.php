@@ -23,12 +23,14 @@ class ComposerAutoloaderInit7e147e446acbc89821028f4fb06e0aa6
         self::$loader = $loader = new \Composer\Autoload\ClassLoader();
         spl_autoload_unregister(array('ComposerAutoloaderInit7e147e446acbc89821028f4fb06e0aa6', 'loadClassLoader'));
 
-        $vendorDir = dirname(__DIR__);
-        $baseDir = dirname($vendorDir);
-
         $map = require __DIR__ . '/autoload_namespaces.php';
         foreach ($map as $namespace => $path) {
             $loader->set($namespace, $path);
+        }
+
+        $map = require __DIR__ . '/autoload_psr4.php';
+        foreach ($map as $namespace => $path) {
+            $loader->setPsr4($namespace, $path);
         }
 
         $classMap = require __DIR__ . '/autoload_classmap.php';

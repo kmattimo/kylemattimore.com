@@ -1,6 +1,6 @@
 <?php
 /**
- * Klein (klein.php) - A lightning fast router for PHP
+ * Klein (klein.php) - A fast & flexible router for PHP
  *
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
@@ -11,14 +11,11 @@
 
 namespace Klein\Tests\DataCollection;
 
-use \Klein\Tests\AbstractKleinTest;
-use \Klein\DataCollection\HeaderDataCollection;
+use Klein\DataCollection\HeaderDataCollection;
+use Klein\Tests\AbstractKleinTest;
 
 /**
  * HeaderDataCollectionTest
- *
- * @uses AbstractKleinTest
- * @package Klein\Tests\DataCollection
  */
 class HeaderDataCollectionTest extends AbstractKleinTest
 {
@@ -26,9 +23,7 @@ class HeaderDataCollectionTest extends AbstractKleinTest
     /**
      * Non existent key in the sample data
      *
-     * @static
-     * @var string
-     * @access protected
+     * @type string
      */
     protected static $nonexistent_key = 'non-standard-header';
 
@@ -42,7 +37,6 @@ class HeaderDataCollectionTest extends AbstractKleinTest
      * have any keys that match the "nonexistent_key"
      *
      * @param array $sample_data
-     * @access protected
      * @return void
      */
     protected function prepareSampleData(&$sample_data)
@@ -61,7 +55,6 @@ class HeaderDataCollectionTest extends AbstractKleinTest
     /**
      * Sample data provider
      *
-     * @access public
      * @return array
      */
     public function sampleDataProvider()
@@ -103,8 +96,8 @@ class HeaderDataCollectionTest extends AbstractKleinTest
     public function testConstructorCorrectlyFormatted($sample_data, $data_collection)
     {
         $this->assertNotSame($sample_data, $data_collection->all());
-        $this->assertArrayNotHasKey(key($sample_data), $data_collection->all());
-        $this->assertContains(current($sample_data), $data_collection->all());
+        $this->assertArrayNotHasKey('HOST', $data_collection->all());
+        $this->assertContains('localhost:8000', $data_collection->all());
     }
 
     /**
@@ -143,9 +136,9 @@ class HeaderDataCollectionTest extends AbstractKleinTest
     public function testExists($sample_data, $data_collection)
     {
         // Make sure the set worked, but the key is different
-        $this->assertTrue($data_collection->exists(key($sample_data)));
+        $this->assertTrue($data_collection->exists('HOST'));
         $this->assertFalse($data_collection->exists(static::$nonexistent_key));
-        $this->assertArrayNotHasKey(key($sample_data), $data_collection->all());
+        $this->assertArrayNotHasKey('HOST', $data_collection->all());
     }
 
     /**
@@ -153,12 +146,12 @@ class HeaderDataCollectionTest extends AbstractKleinTest
      */
     public function testRemove($sample_data, $data_collection)
     {
-        $this->assertTrue($data_collection->exists(key($sample_data)));
-        $this->assertArrayNotHasKey(key($sample_data), $data_collection->all());
+        $this->assertTrue($data_collection->exists('HOST'));
+        $this->assertArrayNotHasKey('HOST', $data_collection->all());
 
-        $data_collection->remove(key($sample_data));
+        $data_collection->remove('HOST');
 
-        $this->assertFalse($data_collection->exists(key($sample_data)));
+        $this->assertFalse($data_collection->exists('HOST'));
     }
 
     public function testNameNormalizing()

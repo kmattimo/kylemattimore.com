@@ -1,6 +1,8 @@
 # Klein.php
 
-**klein.php** is a lightning fast router for PHP 5.3+
+[![Build Status](https://travis-ci.org/chriso/klein.php.png?branch=master)](https://travis-ci.org/chriso/klein.php)
+
+**klein.php** is a fast & flexible router for PHP 5.3+
 
 * Flexible regular expression routing (inspired by [Sinatra](http://www.sinatrarb.com/))
 * A set of [boilerplate methods](#api) for rapidly building web apps
@@ -16,8 +18,8 @@
 ## Composer Installation
 
 1. Get [Composer](http://getcomposer.org/)
-2. Require Klein with `php composer.phar require klein/klein v2.0.x`
-3. Install dependencies with `php composer.phar install`
+2. Require Klein with `php composer.phar require klein/klein`
+3. Add the following to your application's main PHP file: `require 'vendor/autoload.php';`
 
 ## Example
 
@@ -56,7 +58,7 @@ $klein->respond('/[:name]', function ($request) {
 
 ```php
 $klein->respond('GET', '/posts', $callback);
-$klein->respond('POST', '/posts/create', $callback);
+$klein->respond('POST', '/posts', $callback);
 $klein->respond('PUT', '/posts/[i:id]', $callback);
 $klein->respond('DELETE', '/posts/[i:id]', $callback);
 $klein->respond('OPTIONS', null, $callback);
@@ -84,28 +86,28 @@ $klein->respond(function ($request, $response, $service) {
     }
 });
 
-$klein->respond('/report.[xml|csv|json:format]?', function ($reqest, $response, $service) {
+$klein->respond('/report.[xml|csv|json:format]?', function ($request, $response, $service) {
     // Get the format or fallback to JSON as the default
     $send = $request->param('format', 'json');
     $service->$send($report);
 });
 
 $klein->respond('/report/latest', function ($request, $response, $service) {
-    $service->file('/tmp/cached_report.zip');
+    $response->file('/tmp/cached_report.zip');
 });
 ```
 
 *Example 5* - All together
 
 ```php
-$klein->respond(function ($request, $response, $service, $app) {
+$klein->respond(function ($request, $response, $service, $app) use ($klein) {
     // Handle exceptions => flash the message and redirect to the referrer
-    $response->onError(function ($klein, $err_msg) {
+    $klein->onError(function ($klein, $err_msg) {
         $klein->service()->flash($err_msg);
         $klein->service()->back();
     });
 
-    // The third parameter can be used to share scope and global objects
+    // The fourth parameter can be used to share scope and global objects
     $app->db = new PDO(...);
 
     // $app also can store lazy services, e.g. if you don't want to
@@ -249,9 +251,9 @@ authentication or view layouts. e.g. as a basic example, the following
 code will wrap other routes with a header and footer
 
 ```php
-$klein->respond('*', function ($request, $response, $service) { $service->render('header.phtml'; });
+$klein->respond('*', function ($request, $response, $service) { $service->render('header.phtml'); });
 //other routes
-$klein->respond('*', function ($request, $response, $service) { $service->render('footer.phtml'; });
+$klein->respond('*', function ($request, $response, $service) { $service->render('footer.phtml'); });
 ```
 
 Routes automatically match the entire request URI. If you need to match
@@ -297,6 +299,9 @@ echo $this->query(array('page' => 2))   // Modify the current query string
 
 ## API
 
+Below is a list of the public methods in the common classes you will most likely use. For a more formal source
+of class/method documentation, please see the [PHPdoc generated documentation](http://chriso.github.io/klein.php/docs/).
+
 ```php
 $request->
     id($hash = true)                    // Get a unique ID for the request
@@ -315,8 +320,10 @@ $request->
     ip()                                // Get the request IP
     userAgent()                         // Get the request user agent
     uri()                               // Get the request URI
+    pathname()                          // Get the request pathname
     method()                            // Get the request method
     method($method)                     // Check if the request method is $method, i.e. method('post') => true
+    query($key, $value = null)          // Get, add to, or modify the current query string
     <param>                             // Get / Set (if assigned a value) a request parameter
 
 $response->
@@ -329,11 +336,14 @@ $response->
     prepend($content)                               // Prepend a string to the response body
     append($content)                                // Append a string to the response body
     isLocked()                                      // Check if the response is locked
+    requireUnlocked()                               // Require that a response is unlocked
     lock()                                          // Lock the response from further modification
     unlock()                                        // Unlock the response
     sendHeaders($override = false)                  // Send the HTTP response headers
+    sendCookies($override = false)                  // Send the HTTP response cookies
     sendBody()                                      // Send the response body's content
     send()                                          // Send the response and lock it
+    isSent()                                        // Check if the response has been sent
     chunk($str = null)                              // Enable response chunking (see the wiki)
     header($key, $value = null)                     // Set a response header
     cookie($key, $value = null, $expiry = null)     // Set a cookie
@@ -341,6 +351,8 @@ $response->
     noCache()                                       // Tell the browser not to cache the response
     redirect($url, $code = 302)                     // Redirect to the specified URL
     dump($obj)                                      // Dump an object
+    file($path, $filename = null)                   // Send a file
+    json($object, $jsonp_prefix = null)             // Send an object as JSON or JSONP by providing padding prefix
 
 $service->
     sharedData()                                    // Return the shared data collection
@@ -349,8 +361,6 @@ $service->
     flashes($type = null)                           // Retrieve and clears all flashes of $type
     markdown($str, $args, ...)                      // Return a string formatted with markdown
     escape($str)                                    // Escape a string
-    file($path, $filename = null)                   // Send a file
-    json($object, $jsonp_prefix = null)             // Send an object as JSON or JSONP by providing padding prefix
     refresh()                                       // Redirect to the current URL
     back()                                          // Redirect to the referer
     query($key, $value = null)                      // Modify the current query string
@@ -406,18 +416,7 @@ directory with `./vendor/bin/phpunit`
 
 ## Contributing
 
-Contributing is absolutely encouraged, but a few things should be taken into
-account:
-
-- Always test any bug-fixes or changes with [unit testing](#unit-testing)
-- When adding or changing a feature, make sure to write a **new** [unit test](#unit-testing)
-- Please try to adhere to the standards made obvious in the class source files
-   - This project uses ["soft tabs"](http://vim.wikia.com/wiki/Converting_tabs_to_spaces), 
-   please don't use any hard tabbing
-   - Make sure to document your code with the 
-   [PHPDoc syntax](http://www.phpdoc.org/docs/latest/for-users/phpdoc-reference.html)
-- When creating pull requests, make sure to have checked your code for styling
-  and create useful/verbose PR messages
+See the [contributing guide](CONTRIBUTING.md) for more info
 
 ## More information
 
