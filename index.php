@@ -17,10 +17,17 @@ require_once __DIR__ . '/vendor/autoload.php';
 // $SuperSecretArray = Yaml::parse(file_get_contents('parameters.yml'));
 // $mandrillKey = $SuperSecretArray["parameters"]["mandrill_key"];
 // $devEmail = $SuperSecretArray["parameters"]['dev_email'];
-var_dump($_ENV);
-if(!isset($_ENV['DEV_EMAIL'])) {
-  // or !isset($_ENV['MANDRILL_KEY']) ) {
-  die("Important Environment Variables not set for this app. Plz set them.");
+
+//for local development without env
+if(file_exists('config.php')) {
+  require_once('config.php');
+  }
+else {
+  if(!isset($_ENV['DEV_EMAIL']) or !isset($_ENV['MANDRILL_KEY']) ) {
+    die("Environment Variables not set for this app. Plz set them.");
+  }
+  $devEmail = $_ENV["DEV_EMAIL"];
+  $mandrillKey = $_ENV["MANDRILL_KEY"];
 }
 
    require_once("mandrill_basic.php");
