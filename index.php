@@ -1,23 +1,18 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+  //only in development
+  // error_reporting(E_ALL);
+  // ini_set('display_errors', 1);
 
-   // Include the Smarty Templating Engine
-   define('SMARTY_DIR', __DIR__ . '/smarty-3.1.24/libs/');
-   require_once(SMARTY_DIR . 'Smarty.class.php');
-   require_once("AYAH/ayah.php");
-   
-
-  
-
-require_once __DIR__ . '/vendor/autoload.php';
-
-// use Symfony\Component\Yaml\Yaml;
-// $SuperSecretArray = Yaml::parse(file_get_contents('parameters.yml'));
-// $mandrillKey = $SuperSecretArray["parameters"]["mandrill_key"];
-// $devEmail = $SuperSecretArray["parameters"]['dev_email'];
-
+ // Include the Smarty Templating Engine
+ define('SMARTY_DIR', __DIR__ . '/smarty-3.1.24/libs/');
+ require_once(SMARTY_DIR . 'Smarty.class.php');
+ require_once __DIR__ . '/vendor/autoload.php';
+ $klein = new \Klein\Klein();
+  // use Symfony\Component\Yaml\Yaml;
+  // $SuperSecretArray = Yaml::parse(file_get_contents('parameters.yml'));
+  // $mandrillKey = $SuperSecretArray["parameters"]["mandrill_key"];
+  // $devEmail = $SuperSecretArray["parameters"]['dev_email'];
 //for local development without env
 if(file_exists('config.php')) {
   require_once('config.php');
@@ -30,21 +25,14 @@ else {
   $mandrillKey = $_ENV["MANDRILL_KEY"];
 }
 
-   require_once("mandrill_basic.php");
+require_once("mandrill_basic.php");
 		
-   
-   $smarty = new Smarty();
-   $smarty->setTemplateDir(__DIR__ . '/templates/templates/');
-   $smarty->setCompileDir(__DIR__ . '/templates/templates_c/');
-   $smarty->setConfigDir(__DIR__ . '/templates/configs/');
-   $smarty->setCacheDir(__DIR__ . '/templates/cache/');
+ $smarty = new Smarty();
+ $smarty->setTemplateDir(__DIR__ . '/templates/templates/');
+ $smarty->setCompileDir(__DIR__ . '/templates/templates_c/');
+ $smarty->setConfigDir(__DIR__ . '/templates/configs/');
+ $smarty->setCacheDir(__DIR__ . '/templates/cache/');
 
-
-
-   // Setup the Routing Framework
-   require_once __DIR__ . '/vendor/autoload.php';
-   $klein = new \Klein\Klein();
-		
 
    /* Define routes here */
 
@@ -69,38 +57,7 @@ else {
      $smarty->display('contact.tpl');
    });
    
-     $klein->respond(array('POST','GET'), '/contact2/?', function ($request, $response, $service) use ($smarty) {
-	 $smarty->assign('page', 'contact');
-	 $smarty->assign('title', "Kyle Mattimore | Contact");
-	 
-	 $ayah = new AYAH();
-	 $smarty->assign('AYAH', $ayah->getPublisherHTML());
-	 if (array_key_exists('AYAHform', $_POST))
-			{
-					  // Use the AYAH object to see if the user passed or failed the game.
-					  $score = $ayah->scoreResult();
-					  if ($score)
-					  {
-								 // This happens if the user passes the game. In this case,
-								 // we're just displaying a congratulatory message.
-								
-								//base64 decode this if you want my digits
-								$base64_payload= 'PGRpdiBjbGFzcz0iYWxlcnQgYWxlcnQtc3VjY2VzcyI+ICA8YSBocmVmPSJtYWlsdG86a3lsZW1hdHRpbW9yZUBnbWFpbC5jb20iIHRhcmdldD0iX2JsYW5rIiBjbGFzcz0iYWxlcnQtbGluayI+a3lsZW1hdHRpbW9yZUBnbWFpbC5jb208L2E+IDxicj48YnI+IHVtaWNoLmVkdSB1bmlxbmFtZTogPGEgaHJlZj0iaHR0cHM6Ly9tY29tbXVuaXR5LnVtaWNoLmVkdS8jcHJvZmlsZTprbWF0dGltbyIgdGFyZ2V0PSJfYmxhbmsiIGNsYXNzPSJhbGVydC1saW5rIiA+a21hdHRpbW88L2E+ICA8YnI+PGJyPiBHb29nbGUgVm9pY2U6ICg3MzQpLTk1Ni0wNDU2IDxicj48YnI+IFJlc3VtZTogIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmRyb3Bib3guY29tL3MvbzFxM2F6Z3Q5MWtlYWE1L0t5bGUlMjBNYXR0aW1vcmUlMjBSZXN1bWUlMjAxMi0yMDE0LnBkZj9kbD0xIiBjbGFzcz0iYWxlcnQtbGluayI+IDxpIGNsYXNzPSJmYSBmYS1maWxlLXBkZi1vIGZhLWxnICI+PC9pPiBwZGYgPC9hPiAgJm5ic3A7IDxhIGhyZWY9Imh0dHBzOi8vd3d3LmRyb3Bib3guY29tL3MvNjgxbGF5aWJveTh3bHFnL0t5bGUlMjBNYXR0aW1vcmUlMjBSZXN1bWUlMjAxMi0yMDE0LmRvY3g/ZGw9MSIgY2xhc3M9ImFsZXJ0LWxpbmsiPiA8aSBjbGFzcz0iZmEgZmEtZmlsZS13b3JkLW8gZmEtbGcgIj48L2k+IGRvY3ggPC9hPiA8YnI+PGJyPiAgPC9kaXY+';
-								 $smarty->assign('payload', base64_decode($base64_payload) );
-								 
-								notifyMe();
-								 
-					  }
-					  else
-					  {
-							// This happens if the user does not pass the game.
-							//	 echo "Sorry, but we were not able to verify you as human. Please try again.";
-								 $smarty->assign('payload', 'not validated');
-					  }
-			}
 
-     $smarty->display('contact2.tpl');
-   });
    
  //is your ISP giving you supercookies?
 	$klein->respond('GET', '/headers', function ($request) {
@@ -139,8 +96,6 @@ else {
 			notifyMe();
    });
    
-
  
    $klein->dispatch();
-
 ?>

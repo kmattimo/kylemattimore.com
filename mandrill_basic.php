@@ -11,6 +11,7 @@ try {
 $mandrill = new Mandrill($mandrillKey);
 
 
+$infoString = "";
 
 if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
 	$infoString =  '<br><br>'. $_SERVER['HTTP_X_FORWARDED_FOR'];
