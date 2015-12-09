@@ -1,5 +1,26 @@
 {
     "require": {
-        "klein/klein": "~2.1"
+        "klein/klein": "~2.1",
+        "incenteev/composer-parameter-handler": ">=2.1"
+    },
+    "scripts": {
+      "post-install-cmd": [
+          "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+      "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+      
+    },
+    "extra": {
+      "incenteev-parameters": {
+          "file": "app/config/parameters.yml",
+          "env-map": {
+          "database_host": "DATABASE_HOST",
+          "database_port": "DATABASE_PORT",
+          "database_name": "DATABASE_NAME",
+          "database_user": "DATABASE_USER",
+          "database_password": "DATABASE_PASSWORD"
+        }
     }
 }
