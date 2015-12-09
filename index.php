@@ -7,7 +7,16 @@ ini_set('display_errors', 1);
    define('SMARTY_DIR', __DIR__ . '/smarty-3.1.24/libs/');
    require_once(SMARTY_DIR . 'Smarty.class.php');
    require_once("AYAH/ayah.php");
-   require_once("config.php");
+   
+
+  
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Yaml\Yaml;
+$SuperSecretArray = Yaml::parse(file_get_contents('parameters.yml'));
+$mandrillKey = $SuperSecretArray["parameters"]["mandrill_key"];
+$devEmail = $SuperSecretArray["parameters"]['dev_email'];
 
    require_once("mandrill_basic.php");
 		

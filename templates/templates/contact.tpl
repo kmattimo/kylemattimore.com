@@ -28,12 +28,7 @@
 	<div class="row row-centered" >
 		<div class="col-xs-12 col-md-6 col-lg-6  col-centered-left" id="contactinfo">
 		<div class="well"> If you aren't, contact me at [kylemattimore+spam(at)g mail<(dot)com] </div>
-		
-			<a href="/contact2">Alternate Validation</a>
-			
 			<noscript> <br> Note: you appear to have scripts disabled. Please enable JavaScript to validate, or examine the code and run the ajax call yourself :) </noscript>
-
-			
 		</div>
 	</div>
 </div>	
