@@ -1,0 +1,25 @@
+{
+    "require": {
+        "klein/klein": "~2.1",
+        "incenteev/composer-parameter-handler": ">=2.1",
+        "symfony/yaml": ">=3.0"
+    },
+    "scripts": {
+      "post-install-cmd": [
+          "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+      "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+      
+    },
+    "extra": {
+      "incenteev-parameters": {
+          "file": "parameters.yml",
+          "env-map": {
+          "mandril_key": "MANDRILL_KEY",
+          "dev_email": "DEV_EMAIL"
+        }
+      }
+    }
+}

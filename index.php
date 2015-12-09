@@ -13,10 +13,15 @@ ini_set('display_errors', 1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Symfony\Component\Yaml\Yaml;
-$SuperSecretArray = Yaml::parse(file_get_contents('parameters.yml'));
-$mandrillKey = $SuperSecretArray["parameters"]["mandrill_key"];
-$devEmail = $SuperSecretArray["parameters"]['dev_email'];
+// use Symfony\Component\Yaml\Yaml;
+// $SuperSecretArray = Yaml::parse(file_get_contents('parameters.yml'));
+// $mandrillKey = $SuperSecretArray["parameters"]["mandrill_key"];
+// $devEmail = $SuperSecretArray["parameters"]['dev_email'];
+var_dump($_ENV);
+if(!isset($_ENV['DEV_EMAIL'])) {
+  // or !isset($_ENV['MANDRILL_KEY']) ) {
+  die("Important Environment Variables not set for this app. Plz set them.");
+}
 
    require_once("mandrill_basic.php");
 		
