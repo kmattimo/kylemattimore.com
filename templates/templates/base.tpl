@@ -38,7 +38,7 @@
 		
 {block "footerScripts"}
 <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 {/block}		
 {block "customJS"}{/block}		
 		

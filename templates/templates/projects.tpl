@@ -20,20 +20,20 @@
 		<div class="well">
 			3-track looper Max for Live device <br> <br>
 			<div class="thumbnail">
-				<a href="http://youtu.be/Y7R9IHbrVes" target="blank"> <img src="/static/images/looper.jpg"  > </a>
+				<a href="https://youtu.be/Y7R9IHbrVes" target="blank"> <img src="/static/images/looper.jpg"  > </a>
 			</div>
 			Designed for an intuitive "Loop Station" feel with a Novation Launchpad. &nbsp;
-			<a href="http://youtu.be/Y7R9IHbrVes" target="blank">Demo Video</a>
+			<a href="https://youtu.be/Y7R9IHbrVes" target="blank">Demo Video</a>
 		</div>
 	</div>	
 	
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		
 		<div class="well">
-			<a href="http://imgur.com/a/3sfTD" target="blank">
+			<a href="https://imgur.com/a/3sfTD" target="blank">
 				DIY (scrap wood) guitar pedalboard 
 				<div class="thumbnail"> <img src="/static/images/pedalboard-empty.jpg"> </div>
-				<div class="thumbnail"> <img src="http://i.imgur.com/CrDZEFll.jpg"> </div>
+				<div class="thumbnail"> <img src="https://i.imgur.com/CrDZEFll.jpg"> </div>
 				
 				The always improving work in progress.
 			</a>
