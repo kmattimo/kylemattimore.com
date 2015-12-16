@@ -1,0 +1,50 @@
+// This stuff is really old, basically my first CSS experience
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered-left {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/*fix for annoying whitespace between row and column in navigation*/
+.row-centered-2 {
+	text-align:center;
+	font-size: 0
+}
+.col-centered-2 {
+    display:inline-block;
+    float:none;
+    /* inline-block space fix */
+    margin-right:-4px;
+	/*bootstrap default, apparently*/
+	font-size:16px;
+}
+
+.no-bottom-padding {
+	padding-bottom:0px;
+}
+
+
+.nameheader {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.image-inline {
+	margin: .5em;
+	display:inline-block;
+}
+

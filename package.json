@@ -1,0 +1,26 @@
+{
+  "name": "kylemattimore.com",
+  "version": "1.0.0",
+  "description": "Kyle's personal website",
+  "main": "Gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmattimo/kylemattimore.com.git"
+  },
+  "author": "Kyle Mattimore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmattimo/kylemattimore.com/issues"
+  },
+  "homepage": "https://github.com/kmattimo/kylemattimore.com#readme"
+}
