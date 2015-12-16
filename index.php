@@ -5,8 +5,8 @@
   // ini_set('display_errors', 1);
 
  // Include the Smarty Templating Engine
- define('SMARTY_DIR', __DIR__ . '/smarty-3.1.24/libs/');
- require_once(SMARTY_DIR . 'Smarty.class.php');
+ // define('SMARTY_DIR', __DIR__ . '/smarty-3.1.24/libs/');
+ // require_once(SMARTY_DIR . 'Smarty.class.php');
  require_once __DIR__ . '/vendor/autoload.php';
  $klein = new \Klein\Klein();
   // use Symfony\Component\Yaml\Yaml;
