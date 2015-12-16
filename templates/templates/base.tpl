@@ -5,10 +5,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="keywords" content="kylemattimore, kmattimo, umich, kyle mattimore, developer, web developer, music, guitar">
-	<meta name="description" content="Kyle's Personal Site | Music &amp; Tech | University of Michigan | One North Interactive">
+	<meta name="description" content="Music &amp; Tech | University of Michigan | One North Interactive">
 	<meta name="author" content="Kyle Mattimore">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/site.css" />
   <title>{$title}</title>
 </head>
 <body>
@@ -37,7 +36,7 @@
 
 		
 {block "footerScripts"}
-<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="/static/css/font-awesome.min.css"> -->
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 {/block}		
 {block "customJS"}{/block}		

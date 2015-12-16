@@ -1,5 +1,0 @@
-# This file is a "template" of what your parameters.yml file should look like
-parameters:
-#not in use atm
-  dev_email: 
-  mandrill_key: 
