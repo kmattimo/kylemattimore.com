@@ -9,10 +9,7 @@
 	
 	<div class="row row-centered">
 		<div class="col-xs-12 col-md-6 col-lg-6 col-centered-left">
-			{*<h4>I am seeking Summer employment!</h4> May through August 2015. 
-			
-			<br><br>
-			*}
+
 			<h4> Are you human? </h4>
 		</div>
 	</div>
@@ -35,7 +32,10 @@
 
 <br/><br/>
 {/block}
-
+{block "footerScripts"}
+<!-- <link rel="stylesheet" href="/static/css/font-awesome.min.css"> -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+{/block}	
 {block name='customJS'}
 <script src="/static/js/obfuscation.js"></script>
 <script src="/static/js/humanValidation.js"></script>

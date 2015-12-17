@@ -5,14 +5,16 @@
 <div class="container">
 <div class="row row-centered">
 
+
+	
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		<div class="well">
-			PAT 201 Listening test webapp: &nbsp;
-			<a href="http://pat201.kylemattimore.com" target="blank">pat201.kylemattimore.com</a> <br><br>
+		Multitrack<br><br>
 			<div class="thumbnail"> 
-				<a href="http://pat201.kylemattimore.com" target="blank"> 	<img src="/static/images/pat201.png" > </a>
+				<a href="http://multitrack.kylemattimore.com" target="blank"> 	<img src="/static/images/multitrack-zoomed-highres.jpg" > </a>
 			</div>
-		<a href="https://github.com/kmattimo/PAT201-Listening-Guide">Source code</a>
+			A web audio rehearsal tool built with Symfony2.
+		<a href="https://github.com/kmattimo/multitrack"> GitHub Repo</a>
 		</div>
 	</div>	
 	
@@ -28,32 +30,71 @@
 	</div>	
 	
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
-		
-		<div class="well">
-			<a href="https://imgur.com/a/3sfTD" target="blank">
-				DIY (scrap wood) guitar pedalboard 
-				<div class="thumbnail"> <img src="/static/images/pedalboard-empty.jpg"> </div>
-				<div class="thumbnail"> <img src="https://i.imgur.com/CrDZEFll.jpg"> </div>
-				
-				The always improving work in progress.
-			</a>
+			<div class="well">
+			EMI Surfer<br><br>
+			<div class="thumbnail"> 
+				<a href="https://www.youtube.com/watch?v=EmabWZc8NY4" target="blank"> 	<img src="/static/images/emisurfer-small.jpg" > </a>
+			</div>
+			Ambient soundscapes with smartphone interference through guitar pickups. 
+			<a href="https://medium.com/@kylemattimore/discovering-alien-communication-or-emi-electric-guitar-soundscapes-b68c667c09eb">Blog</a>,&nbsp;
+			<a href="https://github.com/kmattimo/EmiSurfer">GitHub Repo</a>
 		</div>
-		
+	</div>	
+	
+	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
+			<div class="well">
+			grndma.io<br><br>
+			<div class="thumbnail"> 
+				<a href="http://grndma.kylemattimore.com" target="blank"> 	<img src="/static/images/grndma.jpg" > </a>
+			</div>
+			Speed Dial- for apps and services. 2nd place at BattleHack Chicago 2015.
+			<a href="https://github.com/stephenhuh/grndma.io">GitHub Repo</a>
+		</div>
+	</div>	
+	
+	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
+		<div class="well">
+			Scrap wood guitar pedalboard 
+			<a href="https://imgur.com/a/3sfTD" target="blank">
+				<div class="thumbnail"> <img src="/static/images/pedalboard-empty.jpg"> </div>
+				<div class="thumbnail"> <img src="https://i.imgur.com/xDysB9Gl.jpg"> </div>
+			</a>
+			The always improving work in progress. 
+		</div>
+	</div>	
+	
+	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
+			<div class="well">
+			PAT 201 Listening quiz <br><br>
+			<div class="thumbnail"> 
+				<a href="https://pat201.kylemattimore.com" target="blank"> 	<img src="/static/images/pat201.png" > </a>
+			</div>
+		My first Javascript web app. 
+		<a href="https://github.com/kmattimo/PAT201-Listening-Guide">GitHub Repo</a>
+		</div>
 	</div>	
 
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		<div class="well">
-			<a href="http://myessaycoach.net" target="blank">Myessaycoach.net</a> <br><br>
-				<div class="thumbnail"> <img src="/static/images/essaycoach.jpg"> </div>
-				Built with Google Sites, architected for ultra low cost hosting. Active since 2011. 
+			MyEssayCoach<br><br>
+				<div class="thumbnail">
+					<a href="http://myessaycoach.net" target="blank">
+					 <img src="/static/images/essaycoach.jpg"> 
+					</a> 
+				 </div> 
+				Built with Google Sites, architected for ultra low cost hosting/development. Active since 2011. 
 		</div>
 	</div>
 
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 		<div class="well">
-			<a href="http://axomichhc.org" target="blank">Axomichhc.org</a> <br><br>
-				<div class="thumbnail">  <img src="/static/images/axo.jpg"> </div>
-				Built with Google Sites for Theta Corp. of Alpha Chi Omega, architected for ultra low cost hosting. Active since 2012. 
+			AXO Theta Corp. <br><br>
+				<div class="thumbnail"> 
+					<a href="http://axomichhc.org" target="blank">
+					 <img src="/static/images/axo.jpg"> 
+				 	</a>
+				</div>
+				Built with Google Sites for Theta Corp. of Alpha Chi Omega, architected for ultra low cost hosting/development. Active since 2012. 
 		</div>
 	</div>
 	

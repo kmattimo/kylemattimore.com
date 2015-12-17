@@ -7,9 +7,9 @@
 		<div class="col-xs-12 col-md-8 col-lg-6 col-centered">
 			<div class="row row-centered">
 					
-						<img  src="static/images/self-formal-cropped.jpg" style="max-height:220px;" class="img-responsive img-rounded image-inline" alt="...">
+						<img  src="static/images/self-formal-cropped-2.jpg" style="max-height:220px;" class="img-responsive img-rounded image-inline" alt="...">
 					
-						<img  src="static/images/self-guitar-small.jpg" style="max-height:220px; " class="img-responsive img-rounded image-inline" alt="...">
+						<img  src="static/images/self-guitar-smaller.jpg" style="max-height:220px; " class="img-responsive img-rounded image-inline" alt="...">
 				
 			</div>
 		</div>
@@ -24,10 +24,6 @@
 			I'm a senior in Computer Science Engineering at the University of Michigan. <br>
 			My interests include Computer Security, Web Development, Sound Engineering, making and enjoying music, and Ultimate Frisbee. <br/><br/>
 			
-		{*	<div class="alert alert-info" role="alert">
-			I am looking for a position this summer, with a goal to grow my skills in Web development, security, and/or networks! &nbsp; <a href="/contact" class="alert-link">Contact me</a>
-			</div>
-		*}	
 		</div>
 	</div>
 <br>
