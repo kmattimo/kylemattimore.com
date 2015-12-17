@@ -30,6 +30,18 @@
 	</div>	
 	
 	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
+		<div class="well">
+			Cloud Kyle<br> <br>
+			<div class="thumbnail">
+				<a href="https://kmattimo.me" target="blank"> <img src="/static/images/dokku.jpg"  > </a>
+			</div>
+			Dokku on Digitalocean hosting tweaked to be FAST.
+		</div>
+	</div>	
+	
+	
+	
+	<div class="col-xs-12 col-sm-6 col-lg-4 col-centered">
 			<div class="well">
 			EMI Surfer<br><br>
 			<div class="thumbnail"> 
