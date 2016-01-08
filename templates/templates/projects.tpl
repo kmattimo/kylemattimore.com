@@ -33,9 +33,9 @@
 		<div class="well">
 			Cloud Kyle<br> <br>
 			<div class="thumbnail">
-				<a href="https://kmattimo.me" target="blank"> <img src="/static/images/dokku.jpg"  > </a>
+				<a href="https://www.kmattimo.me" target="blank"> <img src="/static/images/dokku.jpg"  > </a>
 			</div>
-			Dokku on Digitalocean hosting tweaked to be FAST.
+			Dokku on Digitalocean hosting- tweaked to be fast!
 		</div>
 	</div>	
 	
