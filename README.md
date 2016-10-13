@@ -5,8 +5,7 @@ Personal Website v2
 
 PHP/Klein/Smarty
 
-Requires ENV variables set after deploy
-DEV_EMAIL, MANDRILL_KEY
+
 .env file should set PHP buildpack on dokku/heroku
 
 
@@ -15,4 +14,6 @@ npm install the things
 
 PHP -S 0.0.0.0:8000
 gulp serve
+
+uses encode/decode JS functions, call from console, remove (text) line breaks first
 

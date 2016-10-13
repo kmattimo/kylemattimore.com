@@ -21,8 +21,9 @@
 	
 		<div class="col-xs-10 col-sm-10 col-md-8 col-lg-6 col-centered">
 		<p class="lead">
-			I'm a University of Michigan graduate in Computer Science Engineering and a Developer at One North Interactive. <br> <br>
-			My interests include Web Development, Sound Engineering, Computer Security, making and enjoying music, and Ultimate Frisbee. 
+			I'm a University of Michigan grad in Computer Science and a developer at One North Interactive. <br> <br>
+			My interests include Web Development, Sound Engineering, Computer Security, making and enjoying music, and Ultimate Frisbee. <br>
+			Check out my band <a href="http://brokenarrow.io" target="_blank"> The Broken Arrow Complex</a>
 		</p>
 		</div>
 	</div>
